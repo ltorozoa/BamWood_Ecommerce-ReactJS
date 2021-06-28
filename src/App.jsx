@@ -1,13 +1,17 @@
-import NavBar from "./components/NavComponents/NavBar.jsx";
+import NavBar from "./components/NavComponents"
 import './App.css';
+import HomeContainer from "./containers/HomeContainer";
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar/>
-        
+
+        <HomeContainer />
+      
+
+
       </header>
     </div>
   );
@@ -15,5 +19,3 @@ function App() {
 
 
 export default App;
-
-    
