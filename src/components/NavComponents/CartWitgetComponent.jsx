@@ -2,7 +2,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
-function imagen() {
+function icono () {
 
   return (
 
@@ -12,6 +12,6 @@ function imagen() {
 
     </div>
   );
-}
+};
 
-export default imagen
+export default icono

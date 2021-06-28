@@ -1,6 +1,6 @@
 import React from "react"
 import './NavBar.css';
-import imagen from "./CartWitgetComponent";
+import icono from "./CartWitgetComponent";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -10,11 +10,11 @@ function NavBar() {
 
       <div >
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-           
-           <imagen/>
+
+          <icono />
 
           <a className="navbar-brand" href="#">BamWood</a>
-          
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -31,11 +31,11 @@ function NavBar() {
             </ul>
           </div>
           <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" > 
-              </input>
-              <button className="btn btn-outline-success" type="submit"> Buscar </button>
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            </input>
+            <button className="btn btn-outline-success" type="submit"> Buscar </button>
           </form>
-          
+
         </nav>
       </div>
     </div>
