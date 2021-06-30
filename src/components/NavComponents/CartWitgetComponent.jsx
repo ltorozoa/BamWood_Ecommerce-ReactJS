@@ -1,17 +1,19 @@
 
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.css';
+import React from 'react';
+import BamWood from '../../Imagenes/BamWood.png';
 
-function icono () {
+function Icono(){
 
-  return (
+  return(
 
-    <div>
+      <img 
+      
+      src={BamWood} width="50" >
+      
+      </img>
 
-      <img src="../imagenes/icono.png" className="img-thumbnail" alt="100"> </img>
+  )
 
-    </div>
-  );
-};
+}
 
-export default icono
+export default Icono;

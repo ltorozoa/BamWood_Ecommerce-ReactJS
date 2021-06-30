@@ -9,7 +9,7 @@ function HomeContainer() {
 
             <header>
                 <NavBar />
-                <ItemListContainer gretting={'Hola, ahora estoy siendo una prop'}/>
+                <ItemListContainer gretting={'Bienvenidos'}/>
             </header>
 
             <section>

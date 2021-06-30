@@ -1,7 +1,7 @@
 import React from "react"
 import './NavBar.css';
-import icono from "./CartWitgetComponent";
 import 'bootstrap/dist/css/bootstrap.css';
+import Icono from "./CartWitgetComponent";
 
 
 function NavBar() {
@@ -9,10 +9,9 @@ function NavBar() {
     <div className="container-fluid">
 
       <div >
+
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-
-          <icono />
-
+          <Icono />
           <a className="navbar-brand" href="#">BamWood</a>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
