@@ -8,7 +8,7 @@ function Icono(){
 
       <img 
       
-      src={BamWood} width="50" >
+      src={BamWood} width="30" >
       
       </img>
 

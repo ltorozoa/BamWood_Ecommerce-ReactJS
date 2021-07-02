@@ -11,7 +11,7 @@ function NavBar() {
       <div >
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Icono />
+
           <a className="navbar-brand" href="#">BamWood</a>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -34,7 +34,9 @@ function NavBar() {
             </input>
             <button className="btn btn-outline-success" type="submit"> Buscar </button>
           </form>
-
+          <div>
+            <Icono />
+          </div>
         </nav>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import NavBar from "../../components/NavComponents"
 import ItemListContainer from "../ItemListContainer";
+import ItemCount from "../../components/Main/ItemCount";
+
 
 function HomeContainer() {
     return (
@@ -9,11 +11,12 @@ function HomeContainer() {
 
             <header>
                 <NavBar />
-                <ItemListContainer gretting={'Bienvenidos'}/>
+                     
             </header>
 
             <section>
-
+            <ItemListContainer gretting={'Bienvenidos'}/>
+            <ItemCount Stock="5" initial= "1"/>
             </section>
 
         </div>
