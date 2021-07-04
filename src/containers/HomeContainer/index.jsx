@@ -16,7 +16,7 @@ function HomeContainer() {
 
             <section>
             <ItemListContainer gretting={'Bienvenidos'}/>
-            <ItemCount Stock="5" initial= "1"/>
+            <ItemCount/>
             </section>
 
         </div>
