@@ -1,17 +1,47 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
 
 
-function ItemListContainer ({gretting}) {
+function ItemListContainer({ gretting }) {
 
-    return(
+    const [items, setItems] = useState([])
 
-       <div>
+    useEffect(() => {
+
+        async function DataMELT() {
+
+            const respuesta = await fetch ("https://api.mercadolibre.com/sites/MLA/search?q=agendas");
+            const data = await respuesta.Json
+
+            return data
+
+        }
+
+        DataMELT()
+        setItems()
+
+    }), [];
+
+
+    return (
+
+        <div>
+           
             <h2>{gretting}</h2>
-       </div>
+
+            {items ? <ItemList items={items} /> : <h2> Loading...</h2>}
+
+        </div>
+
+
+
 
     )
 
-
+   
 }
+ 
 
+    
 export default ItemListContainer

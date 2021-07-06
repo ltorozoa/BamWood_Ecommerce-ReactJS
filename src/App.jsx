@@ -1,4 +1,4 @@
-import NavBar from "./components/NavComponents"
+
 import './App.css';
 import HomeContainer from "./containers/HomeContainer";
 
