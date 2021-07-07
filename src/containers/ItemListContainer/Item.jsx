@@ -5,20 +5,19 @@ import Button from 'react-bootstrap/Button';
 
 
 
-function CardItem() {
+function CardItem({name, price, img}) {
 
     return (
 
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={img}>  
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                </Card.Text>
-                <Button variant="primary"> Agregar a Carrito </Button>
+                <Card.Title> {name}</Card.Title>
+                <Card.Text> {price} </Card.Text>
+                <Button variant="primary"> Ver producto </Button>
             </Card.Body>
+            </Card.Img>
+
         </Card>
 
 
