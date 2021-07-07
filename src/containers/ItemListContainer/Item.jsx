@@ -4,26 +4,27 @@ import Button from 'react-bootstrap/Button';
 
 
 
-function Item( id, tittle, image, price, description) {
-    
-return (
 
-    <div>
+function CardItem() {
+
+    return (
+
         <Card style={{ width: '18rem' }}>
-
-            <Card.Img variant="top" src="holder.js/100px180"> {image} </Card.Img>
+            <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-                <Card.Title>{tittle}</Card.Title>
-                <Card.Text> {description} </Card.Text>
-                <Card.price> {price} </Card.price>
-                
-                <Button variant="primary"> Agregar al carrito </Button>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                </Card.Text>
+                <Button variant="primary"> Agregar a Carrito </Button>
             </Card.Body>
         </Card>
 
-    </div>
 
     )
+
+
 }
 
-export default Item 
+export default CardItem;

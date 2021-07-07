@@ -1,47 +1,48 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import ItemList from "./ItemList";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import CardItem from "./Item.jsx";
 
 
-function ItemListContainer({ gretting }) {
+function ItemListContainer ({gretting}) {
 
-    const [items, setItems] = useState([])
+    // En el itemList voy a guardar los valores de la API y la voy a ir llenando//
 
-    useEffect(() => {
+    const [itemList, setItemList] = useState([]) 
+    // El estado inicia vacio//
+    // Los resultados los guardamos en un estado y no una variable ya que necesitamos que se renderice cada vez que se modifique//
 
-        async function DataMELT() {
+    useEffect( () => {
 
-            const respuesta = await fetch ("https://api.mercadolibre.com/sites/MLA/search?q=agendas");
-            const data = await respuesta.Json
-
-            return data
-
+        async function BaseMelt (){
+            //Llamo los datos de la API//
+            const response = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=agendas");
+            // Recibo los datos de la API a través del .json//
+            const data = await response.json();
+            // En setItemList voy a guarda "data" que serian los resultados de la API //
+            setItemList (data.results);
         }
 
-        DataMELT()
-        setItems()
+        //Ejecuto la funcion asincronica//
+        BaseMelt()
+    
+    }, [])
+    
+    // Se muestras los datos que trajo la API en la consola//
+    /* console.log (itemList); */
+    
+    
+    return(
 
-    }), [];
-
-
-    return (
-
-        <div>
-           
+        
+       <div>      
+            {itemList.length > 0 ? itemList[0].price:"Loading..."};
             <h2>{gretting}</h2>
-
-            {items ? <ItemList items={items} /> : <h2> Loading...</h2>}
-
-        </div>
-
-
-
+            <CardItem/>
+       </div>
 
     )
 
-   
-}
- 
 
-    
+}
+
 export default ItemListContainer

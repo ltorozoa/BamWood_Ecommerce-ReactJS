@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../../components/NavComponents"
 import ItemListContainer from "../ItemListContainer";
-import ItemCount from "../../components/Main/ItemCount";
+import ItemCount from "../../components/../containers/ItemListContainer/ItemCount.jsx";
 
 
 function HomeContainer() {
