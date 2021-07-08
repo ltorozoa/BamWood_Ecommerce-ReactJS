@@ -36,7 +36,7 @@ function ItemListContainer({ gretting }) {
 
         <div>
 
-            {itemList.map(element => {
+            {/* {itemList.map(element => {
                 return (
 
                  <CardItem key={element.id} name={element.title} price={element.price} description={element.description} img={element.thumbnail}/>
@@ -44,7 +44,7 @@ function ItemListContainer({ gretting }) {
                 )
 
             })
-            }
+            } */}
             
 
             <h2>{gretting}</h2>

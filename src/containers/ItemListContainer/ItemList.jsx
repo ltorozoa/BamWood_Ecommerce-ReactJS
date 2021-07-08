@@ -1,25 +1,26 @@
-/* import react from "react";
-import itemList from "./Item";
+import react from "react";
+import CardItem from "./Item.jsx"
 
 
-function ItemList (itemsList){
+function Productos (){
 return(
+
 
         <div>
 
-            {itemsList.map( itemsList => < key = {itemList.id} title={itemList.title} descripcion={itemList.description} price={itemList.price} />
+            {itemList.map(element => {
+                return (
 
+                 <CardItem key={element.id} name={element.title} price={element.price} description={element.description} img={element.thumbnail}/>
+                    
+                )
 
-
+            })
             }
 
-
         </div>
-
-
     )
     
-
-
 }
-export default ItemList; */
+
+export default Productos;
