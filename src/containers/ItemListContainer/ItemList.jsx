@@ -1,8 +1,14 @@
-import react from "react";
+
+import React from "react";
 import CardItem from "./Item.jsx"
 
 
-function Productos (){
+
+
+function Productos ({itemList}){
+
+ 
+
 return(
 
 
