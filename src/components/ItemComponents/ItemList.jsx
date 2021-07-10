@@ -1,11 +1,11 @@
 
 import React from "react";
-import CardItem from "./Item.jsx"
+import CardItem from "./Item"
 
 
 
 
-function Productos ({itemList}){
+function itemList ({itemList}){
 
  
 
@@ -29,4 +29,4 @@ return(
     
 }
 
-export default Productos;
+export default itemList;

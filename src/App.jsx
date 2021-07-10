@@ -1,6 +1,6 @@
 
 import './App.css';
-import HomeContainer from "./containers/HomeContainer";
+import HomeContainer from "./containers/HomeContainer/HomeContainer.jsx";
 
 
 function App() {

@@ -2,7 +2,7 @@
 import React from 'react';
 import BamWood from '../../Imagenes/BamWood.png';
 
-function Icono(){
+function Carrito (){
 
   return(
 
@@ -16,4 +16,4 @@ function Icono(){
 
 }
 
-export default Icono;
+export default Carrito;

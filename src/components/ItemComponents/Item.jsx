@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
-function CardItem({name, price, img}) {
+function CardItem ({name, price, img}) {
 
     return (
 

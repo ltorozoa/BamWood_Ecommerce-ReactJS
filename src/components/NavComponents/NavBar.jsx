@@ -1,7 +1,6 @@
 import React from "react"
-import './NavBar.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Icono from "./CartWitgetComponent";
+import Carrito from "./Carrito";
 
 
 function NavBar() {
@@ -35,7 +34,9 @@ function NavBar() {
             <button className="btn btn-outline-success" type="submit"> Buscar </button>
           </form>
           <div>
-            <Icono />
+
+            <Carrito/>
+
           </div>
         </nav>
       </div>
