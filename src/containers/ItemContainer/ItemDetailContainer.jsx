@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 function ItemDetailContainer() {
 
@@ -14,7 +14,7 @@ function ItemDetailContainer() {
             
             const data = await response.json();
        
-            setItemList(data.results);
+            setGetitems(data.results);
         }
 
       
@@ -25,4 +25,18 @@ function ItemDetailContainer() {
 
     }, [])
 
+
+
+    return(
+
+            <div>
+
+                <ItemDetail getItems={getItems} />
+
+            </div>
+
+
+    )
 }
+
+export default ItemDetailContainer

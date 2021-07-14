@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import CardItem from "../../components/ItemComponents/Item";
-import itemList from "../../components/ItemComponents/ItemList";
+import ItemList from "../../components/ItemComponents/ItemList"
+
+
 
 
 function ItemListContainer({ gretting }) {
@@ -22,23 +23,23 @@ function ItemListContainer({ gretting }) {
             // En setItemList voy a guarda "data" que serian los resultados de la API //
             setItemList(data.results);
         }
-            
+
         //Ejecuto la funcion asincronica//
         BaseMelt()
 
     }, [])
 
-    
+
 
     // Se muestras los datos que trajo la API en la consola//
     /* console.log (itemList); */
 
 
     return (
-        
+
         <div>
-        
-        <itemList  itemList= {itemList}/>
+
+            <ItemList itemList={itemList} />
 
             <h2>{gretting}</h2>
 

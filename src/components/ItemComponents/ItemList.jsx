@@ -5,9 +5,9 @@ import CardItem from "./Item"
 
 
 
-function itemList ({itemList}){
+function ItemList ({itemList}){
 
- 
+
 
 return(
 
@@ -29,4 +29,4 @@ return(
     
 }
 
-export default itemList;
+export default ItemList;

@@ -1,7 +1,7 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import Carrito from "./Carrito";
-
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -11,7 +11,7 @@ function NavBar() {
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
 
-          <span className="navbar-brand" href="#">BamWood </span>
+          <span className="navbar-brand"> <Link to={'/'}> BamWood </Link> </span>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
 

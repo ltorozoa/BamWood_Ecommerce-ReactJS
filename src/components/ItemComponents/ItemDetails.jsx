@@ -3,12 +3,12 @@ import React from "react";
 
 
 
-function ItemDetail (){
+function ItemDetail ({getItems}){
 
 return(
 
 
-
+            
 
 )
 
