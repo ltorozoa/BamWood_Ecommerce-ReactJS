@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useRef } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
+import { usePopper } from 'react-popper';
 import Carrito from "./Carrito";
 import { Link } from 'react-router-dom';
 
+
+
 function NavBar() {
+
+  const Dropdown = useRef();
+  const {}=usePopper(Dropdown);
+
   return (
     <div className="container-fluid">
 
@@ -18,11 +25,18 @@ function NavBar() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li className="nav-item">
-                <span className="nav-link active" aria-current="page" href="#">Inicio </span>
+                <span className="nav-link active" aria-current="page"> Sobre nosotros </span>
               </li>
-              <li className="nav-item">
-                <span className="nav-link active" aria-current="page" href="#"> Sobre nosotros </span>
+
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Productos </a>
+
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a className="dropdown-item"> <Link to={'/'}> Agendas </Link> </a> </li>
+                </ul>
+
               </li>
+
               <li className="nav-item">
                 <span className="nav-link active" aria-current="page" href="#"> Contacto </span>
               </li>
@@ -35,13 +49,14 @@ function NavBar() {
           </form>
           <div>
 
-            <Carrito/>
+            <Carrito />
 
           </div>
         </nav>
       </div>
-    </div>
+    </div >
   )
 }
+
 
 export default NavBar

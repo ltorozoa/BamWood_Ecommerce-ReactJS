@@ -1,4 +1,8 @@
-import React from 'react'
+import React from "react";
+import {useEffect, useState} from 'react';
+import ItemDetail from "../../components/ItemComponents/ItemDetails";
+
+
 
 function ItemDetailContainer() {
 
@@ -10,7 +14,7 @@ function ItemDetailContainer() {
 
         async function BaseMeltDetail() {
         
-            const response = await fetch("https://api.mercadolibre.com/sites/MLA/search?q=agendas")
+            const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=agendas')
             
             const data = await response.json();
        
@@ -32,7 +36,7 @@ function ItemDetailContainer() {
             <div>
 
                 <ItemDetail getItems={getItems} />
-
+                
             </div>
 
 

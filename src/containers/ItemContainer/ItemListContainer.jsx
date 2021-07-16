@@ -5,6 +5,7 @@ import ItemList from "../../components/ItemComponents/ItemList"
 
 
 
+
 function ItemListContainer({ gretting }) {
 
     // En el itemList voy a guardar los valores de la API y la voy a ir llenando//
@@ -39,9 +40,9 @@ function ItemListContainer({ gretting }) {
 
         <div>
 
-            <ItemList itemList={itemList} />
-
             <h2>{gretting}</h2>
+            <ItemList itemList={itemList} />
+            
 
         </div>
 

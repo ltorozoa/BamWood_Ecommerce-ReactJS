@@ -1,8 +1,9 @@
 import React from "react";
 import NavBar from "../../components/NavComponents/NavBar.jsx"
 import ItemListContainer from "../ItemContainer/ItemListContainer.jsx";
-import ItemCount from "../../components/ItemComponents/ItemCount.jsx";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ItemDetailContainer from "../ItemContainer/ItemDetailContainer.jsx";
+
 
 
 function HomeContainer() {
@@ -16,11 +17,18 @@ function HomeContainer() {
                 <Switch>
                     <section>
                         <Route exact path={'/'}> 
-                            <ItemListContainer gretting={'Cargando...'} />
+                            <ItemListContainer gretting={'Agendas'} />
                         </Route>
-                        <Route>
-                            <ItemCount/>
+                        <Route path={'/productos/:nombreProducto'}> 
+                            <ItemListContainer />
                         </Route>
+                        <Route path={'/productos/:detalleProducto'}> 
+                            <ItemDetailContainer/>
+                        </Route>
+                        <Route path={'detalleProducto'}> 
+                            <ItemDetailContainer/>
+                        </Route>
+
                     </section>
                 </Switch>
             </BrowserRouter>
