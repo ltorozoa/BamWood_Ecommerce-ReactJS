@@ -1,24 +1,17 @@
 import React from "react";
 import CardItem from "./Item";
 
-function ItemDetail ({getItems}){
+function ItemDetail({ getItems }) {
 
-return(
+    return (
 
-    <div>
 
-            {getItems.map(element => {
-                return (
 
-                    <CardItem key={element.id} name={element.title} price={element.price} description={element.description} img={element.thumbnail} />
 
-                )
+        <CardItem key={getItems.id} name={getItems.title} price={getItems.price} description={getItems.description} img={getItems.thumbnail} />
 
-            })
-            }
-
-    </div>
-            
+        
+   
 
 )
 

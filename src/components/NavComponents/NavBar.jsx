@@ -1,15 +1,11 @@
-import React, { useRef } from "react"
+import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import { usePopper } from 'react-popper';
 import Carrito from "./Carrito";
 import { Link } from 'react-router-dom';
 
 
 
 function NavBar() {
-
-  const Dropdown = useRef();
-  const {}=usePopper(Dropdown);
 
   return (
     <div className="container-fluid">
@@ -28,17 +24,17 @@ function NavBar() {
                 <span className="nav-link active" aria-current="page"> Sobre nosotros </span>
               </li>
 
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Productos </a>
+              <li className="nav-item">
+                <a  className="nav-link active" aria-current="page" href> Productos </a>
 
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item"> <Link to={'/'}> Agendas </Link> </a> </li>
+                <ul>
+                  <li> <a className="nav-link active" aria-current="page" href> <Link to={'/'}> Agendas </Link> </a> </li>
                 </ul>
 
               </li>
 
               <li className="nav-item">
-                <span className="nav-link active" aria-current="page" href="#"> Contacto </span>
+                <span className="nav-link active" aria-current="page"> Contacto </span>
               </li>
             </ul>
           </div>

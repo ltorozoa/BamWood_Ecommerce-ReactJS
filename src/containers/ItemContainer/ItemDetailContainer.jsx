@@ -4,11 +4,12 @@ import ItemDetail from "../../components/ItemComponents/ItemDetails";
 
 
 
+
 function ItemDetailContainer() {
 
-
-
     const [getItems, setGetitems] = useState([])
+    
+
 
     useEffect(() => {
 
@@ -18,7 +19,7 @@ function ItemDetailContainer() {
             
             const data = await response.json();
        
-            setGetitems(data.results);
+            setGetitems(data.results[0]);
         }
 
       
@@ -29,13 +30,13 @@ function ItemDetailContainer() {
 
     }, [])
 
-
+        console.log(getItems);
 
     return(
 
             <div>
 
-                <ItemDetail getItems={getItems} />
+              {getItems ? <ItemDetail getItems={getItems} /> : <p>"...Loading"</p>};
                 
             </div>
 

@@ -11,25 +11,25 @@ function HomeContainer() {
 
         <div>
             <BrowserRouter>
-                <header>
+                
                     <NavBar />
-                </header>
+            
                 <Switch>
-                    <section>
+                
                         <Route exact path={'/'}> 
                             <ItemListContainer gretting={'Agendas'} />
                         </Route>
-                        <Route path={'/productos/:nombreProducto'}> 
+                        <Route exact path={'/category/:id'}> 
                             <ItemListContainer />
                         </Route>
-                        <Route path={'/productos/:detalleProducto'}> 
+                        <Route exact path={'/item/:id'}> 
                             <ItemDetailContainer/>
                         </Route>
-                        <Route path={'detalleProducto'}> 
+                        <Route exact path={'detalleProducto'}> 
                             <ItemDetailContainer/>
                         </Route>
 
-                    </section>
+                    
                 </Switch>
             </BrowserRouter>
         </div>
